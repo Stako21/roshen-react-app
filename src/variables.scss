@@ -1,0 +1,88 @@
+$error-color: rgb(218, 0, 0);
+$danger-color: rgb(168, 55, 55);
+$border-color: rgb(189, 189, 189);
+$border-clolr-light-green: #0096db;
+$button-dark: rgb(43, 43, 43);
+$button-light: #7cc0e0;
+$header-background-color: #16212c;
+$main-background-color: #E8DED5;
+$secondary-background-color: #F1E9D6;
+$light-text-color: #d3d3d3;
+$darc-text-color: #272120;
+
+$main-text-color: #292929;
+$contact-text-color: #3e3e3e;
+
+$red-brand-color: #720d0d;
+$yellow-brand-color: #ffe394;
+
+$red-brand-color-hover: #720c0e;
+$yellow-brand-color-hover: #d8bc70;
+
+$header-height: 90px;
+$filter-height: 30px;
+
+$tableLevel1: #1c2733;
+$tableLevel2: #576879;
+$oddRow: #cdcfd3;
+$evenRow: #dde0e4;
+$rowTextColor: #EAEAEA;
+
+$oddRowDarc: #2e4055;
+$evenRowDarc: #404e6b;
+
+$testColor1: #f0f33a;
+
+$font-comfortaa: 'Comfortaa', sans-serif;
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/comfortaa/v30/1Ptug8LJRfWJmhDAuUs4TYFq.woff2') format('woff2');
+}
+
+/* Анімації */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}

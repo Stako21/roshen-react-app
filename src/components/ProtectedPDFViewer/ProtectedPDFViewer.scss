@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+.pdf-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* сам блок с тулбаром и документом */
+.pdf-viewer {
+  width: 100%;
+  max-width: 1200px; /* ограничение для больших экранов */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* обёртка документа: центрируем страницы и запрещаем горизонтальную прокрутку */
+.pdf-document-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: hidden; /* не даёт горизонтальной прокрутки */
+  box-sizing: border-box;
+}
+
+/* каждая страница PDF — блок, который занимает максимум ширины контейнера,
+   но не превышает реальную ширину листа (A4 ~ 842px при 96dpi) */
+.pdf-page {
+  width: 100%;
+  max-width: 842px; /* можно подкорректировать под ваши листы */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* canvas / img внутри react-pdf растягиваем по ширине контейнера */
+// .pdf-page canvas,
+// .pdf-page img {
+//   width: 100% !important;
+//   height: auto !important;
+//   display: block;
+// }
+
+/* для мобильных – отменяем боковые отступы и разрешаем адаптацию */
+// @media (max-width: 680px) {
+//   .pdf-viewer {
+//     padding: 0;
+//   }
+//   .pdf-page {
+//     max-width: 100%;
+//     padding: 0 0.5rem;
+//   }
+// }
+
+@media (max-width: 680px) {
+  .pdf-container .pdf-viewer {
+    padding: 0 ;
+  }
+  .pdf-container .pdf-page {
+    max-width: 100% ;
+    padding: 0 0.5rem ;
+  }
+}

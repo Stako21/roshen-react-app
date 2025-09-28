@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.card {
+  margin-top: 40px;
+  width: 100%;
+  // max-width: 1000px;
+  // background: #f2ead8;
+  
+
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: $main-text-color;
+  // color: $darc-text-color;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .card {
+    padding: 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin-top: 20px;
+  }
+}

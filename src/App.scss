@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.app {
+  // border: 4px solid rgb(43, 0, 255);
+  margin: 0;
+  padding: 0;
+  padding-top: $header-height;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  // position: relative;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  // background-image: url("./img/zp.png");
+  background: linear-gradient( #e8ded5ef, #f1e9d6f2 ), url('./img/zp.png');
+  // background-color: rgb(232, 222, 213);      // запасний фон
+  // background-blend-mode: multiply;
+  background-size: cover;         // або contain / auto
+  background-repeat: no-repeat;   // або repeat / repeat-x / repeat-y
+  background-position:
+    center
+    top 50px;    // або top / bottom / left / right
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// .app::after {
+//   content: "";
+//   background-image: url("./img/zp.png");
+//   opacity: 0.06; // прозорість накладання
+//   // position: absolute;
+//   background-position:
+//     center
+//     top 0;
+//   background-size: cover;         // або contain / auto
+//   background-repeat: no-repeat;
+//   width: 100%;
+//   height: 100%;
+//   // background-color: rgba(232, 222, 213, 0.7); // колір накладання
+//   pointer-events: none; // щоб не блокувати кліки по елементах під накладанням
+//   z-index: -1;
+// }
