@@ -58,7 +58,9 @@ const ProtectedPDFViewer = ({ filePath, fileName }) => {
 
   usePDFWorker();
 
-  setScale(1.0);
+  useEffect(() => {
+    setScale(1.0);
+  }, [isExpanded]);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
